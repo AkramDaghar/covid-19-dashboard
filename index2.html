@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Covid-19 Stats: {{country}}</title>
+</head>
+<body>
+	<image src="{{ url_for('static', filename='flag-icons/svg/'+country_slug+'.svg') }}" width="30px" height="30px">
+	<h1>{{country}}</h1>
+	<div class="cases">
+		<h2>Total Cases</h2>
+		<p>{{total_cases}}</p>
+	</div>
+	<div class="deaths">
+		<h2>Total Deaths</h2>
+		<p>{{total_deaths}}</p>
+	</div>
+	<div class="recoveries">
+		<h2>Total Recoveries</h2>
+		<p>{{total_recovered}}</p>
+	</div>
+	<style type="text/css">
+		h1, image {
+			display: inline;
+		}
+	</style>
+</body>
+</html>
